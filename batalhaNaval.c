@@ -78,11 +78,126 @@ int coluna2 = 3;
                 tabuleiro[linhaAtual][linha3] = NAVIO;  //Coloca o valor 3 na posição 
             }
         }
-    
+
+//DESAFIO NIVEL MESTRE Habilidades especiais
+    #define DESENHO 5  //os desenhos(habilidades) aparecerão em numero 5
+
+  //Habilidade Cruz parte 1
+    int linhaCruz = 2;  //linha 5
+    int colunaCruz = 4;  //coluna(índice 2,'C')
+
+        for(int i= 0; i <= 0; i++){
+            int linhaC = colunaCruz + i; 
+
+            if(linhaC < COLUNAS){
+                tabuleiro[linhaC][linhaCruz] = DESENHO; //Coloca o valor 5 na posição
+            }
+        }
+
+  //Cruz parte 2 na HORIZONTAL
+        #define TAMANHO_DESENHO 4  //coloca tamanho 4 para aparecer tamanho 5
+
+    int linhaCruz2 = 5;
+    int colunaCruz2 = 0;
+
+        for(int i = 0; i <= TAMANHO_DESENHO; i++){
+            int colunaC2 = colunaCruz2 + i;
+
+            if(colunaCruz2 < COLUNAS){
+                tabuleiro[linhaCruz2][colunaC2] = DESENHO;  //Para ficar na horizontal e sair o número 5
+            
+            }
+        }
+
+  //Cruz parte 3 HORIZONTAL
+    int linhaCruz3 = 6; //linha 6
+    int colunaCruz3 = 2; //coluna onde começa(índice 2,'C')
+
+        for(int k= 0; k <= 0; k++){
+            int colunaC3 = colunaCruz3 + k; 
+
+            if(colunaC3 < COLUNAS){
+                tabuleiro[linhaCruz3][colunaC3] = DESENHO; //Coloca o valor 5 na posição
+            }
+        }
+    //Habilidade Octaedro parte 1
+    int linhaOcta = 3;  //linha 7
+    int colunaOcta = 7;  //coluna(índice 3,'D')
+
+        for(int i = 0; i <= 0; i++){
+            int linhaO = colunaOcta + i; 
+
+            if(linhaO < COLUNAS){
+                tabuleiro[linhaO][linhaOcta] = DESENHO; //Coloca o valor 5 na posição
+            }
+        }
+    //Octaedro parte 2
+      #define TAMANHO_OCTA 2   //coloca tamanho 2 para aparecer tamanho 3
+
+    int linhaOcta2 = 8;
+    int colunaOcta2 = 2;
+
+        for(int i = 0; i <= TAMANHO_OCTA; i++){
+            int colunaO = colunaOcta2 + i;
+
+            if(colunaO < COLUNAS){
+                tabuleiro[linhaOcta2][colunaO] = DESENHO;  //Para ficar na horizontal
+            
+            }
+        }
+
+   //Octaedro parte 3
+     int linhaOcta3 = 3;  //linha 3
+     int colunaOcta3 = 9;  //coluna 10, 'D'
+
+        for(int j = 0; j <= 0; j++){
+            int Octa3 = colunaOcta3 + j;
+
+            if(Octa3 < COLUNAS){
+                tabuleiro[Octa3][linhaOcta3] = DESENHO; //Coloca o valor 5 na posição
+            }
+        }
+
+   //Habilidade Cone parte 1   -FIZ DE BAIXO PARA CIMA pra dar certo-
+   #define TAMANHO_CONE 4
+
+   int linhaCone = 7;  //linha 8
+   int colunaCone = 5;  //começa na quinta coluna 'F'
+
+        for(int k = 0; k <= TAMANHO_CONE; k++){
+            int Cone = colunaCone + k;
+
+            if(Cone < COLUNAS){
+                tabuleiro[linhaCone][Cone] = DESENHO;
+            }
+        }
+
+#define Tamanho_cone 2   //coloca 2 para aparecer tamanho 3
+   int linhaCone2 = 6;  
+   int colunaCone2 = 6;  
+
+        for(int m = 0; m <= Tamanho_cone; m++){
+            int Cone2 = colunaCone2 + m;
+
+            if(Cone2 < COLUNAS){
+                tabuleiro[linhaCone2][Cone2] = DESENHO;
+            }
+        }
+
+    //Habilidade Cone parte  3 TOPO DO CONE
+    int linhaCone3 = 5;  //linha 6
+    int colunaCone3 = 7;  //começa na coluna 7 'H'
+
+        for(int n = 0; n <= 0; n++){
+            int Cone3 = colunaCone3 + n;
+
+            if(Cone3 < COLUNAS){
+                tabuleiro[linhaCone3][Cone3] = DESENHO;
+            }
+        }
 
 
 //Exibindo o tabuleiro
-printf("\n--Tabuleiro Final--\n");
 printf("  "); //Espaço para alinhar com os números das linhas 
 
 for(j = 0; j < COLUNAS; j++) printf(" %c ", 'A' + j); //Imprime letras A-J
